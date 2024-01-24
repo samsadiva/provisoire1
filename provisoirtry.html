@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .question {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .question.active {
+            display: block;
+        }
+
+        .progress-container {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .progress {
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+<h5 style="display:inline;"><b style="color: tomato">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; igihe ikizamini kimara: <p id="countdown" style="display: inline;">20:00</p></b></h5>
+<div class="container">
+    <h2 class="text-center mb-4">Online Exam  
+    </h2>
+
+    <div class="progress-container">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <form id="examForm">
+        <div class="question-container">
+
+            <!-- Question 1 -->
+            <div class="question active" id="question1">
+                <p>kunyuranaho bikorerwa:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. Muruhande rwiburyo gusa.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. Igihe cyose ni ibumoso.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. Iburyo iyo unyura kunyamaswa.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. Ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="question2">
+                <p>iki cyapa gisobanura iki:</p>
+                <img src="pim/ntihanyurwa.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. hanyurwa mucyerekezo kimwe.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. ntihanyurwa.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. umuhanda udakomeza.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="question3">
+             <p>icyapa kerekana umuvuduko ntarengwa ikinyabiziga kitagomba kurenza gishyirwa gusa kubinyabiziga bifite uburemere ntarengwa bukurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.burenga toni 1.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. burenga toni 2.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. burenga toni 24.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="question4">
+            <p>iki cyapa:</p>
+                <img src="pim/zenguruka.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.aho banyura bazengurutse.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. kerekana umuhanda wibisate bitatu.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. kerekana ahegereye inkomane.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="question5">
+             <p>Amatara maremare yikinyabiziga agomba kuzimywa mubihe bikurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.iyo umuhanda umurikiye umuyobozi abasha kureba muri metero 20.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. iyo ikinyabiziga kigiye kubisikana nikindi.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. iyo ari munsisiro.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ibisubizo byose nukuri.
+                </label><br>
+            </div>
+              <!-- Question 6 -->
+            <div class="question" id="question6">
+             <p>muribi byapa bikurikira nikihe kerekana ko umuyobozi ukibonye yemerewe gutambuka mbere yabaturutse aho agana munzira ifunganye:</p>
+                <img src="pim/four.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.icyapa B6.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. icyapa A19.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. icyapa B3.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. icyapa A22a.
+                </label><br>
+            </div>
+                    <!-- Question 7 -->
+            <div class="question" id="question7">
+            <p>ikinyabiziga ntigishobora kugira amatara arenga abiri yubwoko bumwe keretse kubyerekeye amatara akurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.Itara ndangamubyimba
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. Itara ryerekana icyerekezo.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. itara ndangaburumbarare.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ibisubizo byose nukuri.
+                </label><br>
+            </div>
+        <!-- Question 8 -->
+            <div class="question" id="question8">
+          <p>iki cyapa gisobanura iki:</p>
+                <img src="pim/abana.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. Abana.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. Inzira yabanyamaguru-itegura guhagarara.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. ikibuga kimikino cyabana.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ikibuga kimyidagaduro.
+                </label><br>
+            </div>
+        <!-- Question 9 -->
+            <div class="question" id="question9">
+             <p>ubugari bwa romoruki ikuruwe nigare cyangwa velomoteri ntiburenza ibipimo bikurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.cm25.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. cm125.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. cm45.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 10 -->
+            <div class="question" id="question10">
+                  <p>iki cyapa gisobanura iki:</p>
+                <img src="pim/umuyaga.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. Akazamuko gashinze cyane.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. umuyaga wintambike.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. uruhererekane rwamakoni.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. umuhanda unyerera.
+                </label><br>
+            </div>
+        <!-- Question 11 -->
+            <div class="question" id="question11">
+              <p>ibinyabiziga bikoreshwa nka tagisi, bitegerereza abantu munzira nyabagendwa bishobora gushyirwaho itara ryerekanako ikinyabiziga kitakodeshejwe, iryo tara rishyirwaho muburyo bukurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. ni itara ryicyatsi rishyirwa imbere kukinyabiziga
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.ni itara ryicyatsi rishyirwa ibumoso
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. ni itara ryumuhondo rishyirwa inyuma.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. a na c nibisubizo byukuri.
+                </label><br>
+            </div>
+        <!-- Question 12 -->
+            <div class="question" id="question12">
+               <p>umuyobozi wikinyabiziga aritegura kunyuraho ibumoso:</p>
+                <img src="pim/car.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. nshobora kumunyuraho nyuze iburyo.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. sinshobora kumunyuraho.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. nshobora kumunyuraho nciye ibumoso ariko mbonyeko mfite umwanya uhagije.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 13 -->
+            <div class="question" id="question13">
+                  <p>ubugari bwa romoruki ntiburenza ubugari bwikinyabiziga kiyikurura iyo ikuruwe nibinyabiziga bikurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.igare
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.velomoteri
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. ipikipiki ifite akanyabiziga kometse kuruhande rwayo.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 14 -->
+            <div class="question" id="question14">
+            <p>umuhanda uromboreje wibice byinshi. ndashaka kunyura kurizi kamyo ebyiri mugihe gito ibumoso icyarimwe biremewe?:</p>
+                <img src="pim/ikamyo.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. yego.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. oya.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. yego bikorewe ibumoso.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 15 -->
+            <div class="question" id="question15">
+                <p>iyo harimo indi myanya birabujijwe gutwara kuntebe yimbere yimodoka abana badafite imyaka:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.imyaka 10
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.imyaka 12
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. imyaka 7.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 16 -->
+            <div class="question" id="question16">
+                <p>kuri iki cyapa cyo mumuhanda cyambere kintegeka?:</p>
+                <img src="pim/mumuhanda.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. kugendera kumuvuduko uri hejuru ya 30km/h.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. kutarenza umuvuduko wa 30km/h.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. birabujijwe kugendera kumuvuduko uri hejuru ya 30km/h.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 17 -->
+            <div class="question" id="question17">
+               <p>icyapa kivuga gutambuka mbere  binyabiziga biturutse imbere gifite amabara akurikira:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.ubuso numweru
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.ikirango numutuku numukara
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. ikirango numweru numukara.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 18 -->
+            <div class="question" id="question18">
+                      <p>ni iyihe myifatire myiza wagira ugeze aho abana bari hafi yinzira nyabagendwa:</p>
+                <img src="pim/abana1.png"><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a. itonde witegereze niba biba ngombwa ubaburire unitegure kuba wahagarara.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b. ihute urenge aho abo bana bari.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. komeza ugume kumuvuduko munini.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. komeza ugende kuruhande rwibury.
+                </label><br>
+            </div>
+        <!-- Question 19 -->
+            <div class="question" id="question19">
+              <p>ni ryari itegeko rigenga gutambuka mbere kwiburyo rikurikizwa mumasangano:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.iyo ntacyapa cyo gutambuka mbere gihari
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.iyo ikimenyetso kimurika cyagenewe ibinyabiziga bidakora
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. A na B nibisubizo byukuri.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ntagisubizo cyukuri kirimo.
+                </label><br>
+            </div>
+        <!-- Question 20 -->
+            <div class="question" id="question20">
+               <p>ibimenyetso bimurika bimurika byerekana uburyo bwo kugendera mumuhanda kwibinyabiziga bishyirwa iburyo bwumuhanda ariko bishobora no gushyirwa ibumoso cyangwa hejuru yumuhanda:</p>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="paris"> a.hakurikijwe ikerekezo abagenzi bireba baganamo
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="berlin"> b.hakurikijwe icyo ibyo bimenyetso bigamije kwerekana
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> c. kugirango birusheho kugaragara neza.
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" name="answer1" value="london"> d. ibisubizo byose nukuri.
+                </label><br>
+            </div>
+
+            <!-- Final Submission Page -->
+
+
+        </div>
+
+        <div class="mt-3" style="float:right;">
+            <button type="button" class="btn btn-primary" id="prevBtn" onclick="changeQuestion(-1)">Previous</button>
+            <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeQuestion(1)">Next</button>
+        </div>
+
+
+
+
+
+
+
+
+            <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  v Soza Ikizami
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="background: tomato;color: white;">
+        <h4 class="modal-title">urifuza gusoza ikizami?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        niba wifuza gusoza ikizamini hitamo (ndashoje) ariko niba ushaka gukomeza gukora hitamo (ndacyakora ) ubundi uhitemo next cyangwa previous
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">ndacyakora</button><a href="amanota.html" class="btn btn-primary">Ndashoje</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Fading modal -->
+<div class="modal fade"></div>
+
+<!-- Modal without animation -->
+<div class="modal"></div>
+
+
+
+
+
+
+
+
+
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+
+
+
+
+
+    var timeLimit = 20 * 60; // 20 minutes in seconds
+        var countdownElement = document.getElementById('countdown');
+
+        function updateTimer() {
+            var minutes = Math.floor(timeLimit / 60);
+            var seconds = timeLimit % 60;
+
+            var formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            var formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+
+            countdownElement.textContent = formattedMinutes + ':' + formattedSeconds;
+
+            if (timeLimit <= 0) {
+                alert('Time is up!');
+                // You can add additional logic here when the time is up
+            } else {
+                timeLimit--;
+                setTimeout(updateTimer, 1000);
+            }
+        }
+
+        updateTimer();
+
+
+
+    let currentQuestion = 1;
+    const totalQuestions = 20;
+
+    function changeQuestion(delta) {
+        const nextQuestion = currentQuestion + delta;
+
+        if (nextQuestion >= 1 && nextQuestion <= totalQuestions) {
+            document.getElementById(`question${currentQuestion}`).classList.remove('active');
+            document.getElementById(`question${nextQuestion}`).classList.add('active');
+            currentQuestion = nextQuestion;
+
+            // Update progress bar
+            const progressPercentage = (currentQuestion / totalQuestions) * 100;
+            document.querySelector('.progress-bar').style.width = `${progressPercentage}%`;
+
+            // Show or hide navigation buttons based on current question
+            document.getElementById('prevBtn').disabled = currentQuestion === 1;
+            document.getElementById('nextBtn').innerHTML = currentQuestion === totalQuestions ? '' : 'Next';
+        }
+    }
+
+    function submitExam() {
+        // Implement your submission logic here
+        alert('Exam submitted successfully!');
+        // You may want to send the answers to a server for grading.
+    }
+
+    // Initial setup
+    document.getElementById('question2').classList.remove('active');
+    document.getElementById('question3').classList.remove('active');
+    document.getElementById('submission').classList.remove('active');
+    document.getElementById('prevBtn').disabled = true;
+</script>
+<!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+</body>
+</html>
